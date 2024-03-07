@@ -1,37 +1,71 @@
 
 let nJuegos = parseInt(prompt("¿Cuantas veses deseas jugar?"));
 
-let jUser = prompt("Seleccione su jugada: piedra, papel o tijera").toLowerCase;;
-
-
 
 // Funcion principal del juego 
 
-function juegoCachipun(nJuegos){
+function juegoCachipun(nGames) {
 
-    for (let i=0; i < nJuegos; i++){
-        let opcionJ1 = prompt("Seleccione su jugada: piedra, papel o tijera").toLowerCase;
+    for (let i = 0; i < nGames; i++) {
+        let jUser = prompt("Seleccione su jugada: piedra, papel o tijera").toLowerCase;
+        let aleatorio = Math.floor(Math.random() * 3);
+        let jugadaMaq;
+
+        // if(aleatorio == 0){
+        //     jugadaMaq = "piedra";
+        // } else if(aleatorio == 1) {
+        //     jugadaMaq = "papel";
+        // } else { 
+        //     jugadaMaq = "tijera";
+        // }
+
+        switch (aleatorio) {
+            case 0:
+                jugadaMaq = "piedra";
+                break;
+
+            case 1:
+                jugadaMaq = "papel";
+                break;
+
+            case 2:
+                jugadaMaq = "tijera";
+                break;
+
+        }
+
+        if (jUser == jugadaMaq) {
+            alert("Empate");
+        } else if ((jUser == 'piedra' && jugadaMaq == 'tijera') ||
+                   (jUser == 'papel' && jugadaMaq == 'piedra') ||
+                   (jUser == 'tijera' && jugadaMaq == 'papel')
+        ) {
+            alert("Winner winner chiken dinner");
+
+        } else {
+            alert("Your loooooseeee!!!!!")
+        }
 
 
 
     };
 }
+juegoCachipun(nJuegos);
 
-// Funcion para determinar la jugada del PC 
 
-function jPc () {
-    const opciones = ["piedra", "papel", "tijera"];
-    const aleatorio = Math.floor(Math.random()*3);
-    return opciones[aleatorio];
-}
 
-// Funcion para determinar al ganador 
 
-function winner (jUser, jPc) {
-    if {
-        (jUser === "piedra" && jPc === "tijera") ||
-        (jUser === "papel" && jPc === "piedra") ||
-        (jUser === "tijera" && jPc === "papel")
-    }
 
-}
+
+// if (eleccionUser === eleccionMaquina) {
+//     alert("Has elegido" ${eleccionUser} "y la maquina" ${eleccionMaquina} "¡ES UN EMPATE!")
+//     empates++;
+// } else if ((eleccionUser === 'piedra' && eleccionMaquina === 'tijera') 
+//     (eleccionUser === 'papel' && eleccionMaquina === 'piedra') 
+//     (eleccionUser === 'tijera' && eleccionMaquina === 'papel')) {
+//     alert("Has elegido" ${eleccionUser} "y la maquina" ${eleccionMaquina} "¡HAS GANADO!")
+//     ganaUser++;
+// } else {
+//     alert("Has elegido" ${eleccionUser} "y la maquina" ${eleccionMaquina} "¡HAS PERDIDO!")
+//     ganaMaqui++;
+// }
