@@ -1,11 +1,11 @@
 
 let nJuegos = parseInt(prompt("¿Cuantas veses deseas jugar?"));
 
-let opcionJ1 = prompt("Seleccione su jugada: piedra, papel o tijera").toLowerCase;;
+let jUser = prompt("Seleccione su jugada: piedra, papel o tijera").toLowerCase;;
 
 
 
-
+// Funcion principal del juego 
 
 function juegoCachipun(nJuegos){
 
@@ -17,14 +17,21 @@ function juegoCachipun(nJuegos){
     };
 }
 
+// Funcion para determinar la jugada del PC 
 
-function opcionPC () {
+function jPc () {
     const opciones = ["piedra", "papel", "tijera"];
     const aleatorio = Math.floor(Math.random()*3);
     return opciones[aleatorio];
-
 }
 
-let opciones = ["piedra", "papel", "tijera"];
+// Funcion para determinar al ganador 
 
+function winner (jUser, jPc) {
+    if {
+        (jUser === "piedra" && jPc === "tijera") ||
+        (jUser === "papel" && jPc === "piedra") ||
+        (jUser === "tijera" && jPc === "papel")
+    }
 
+}
