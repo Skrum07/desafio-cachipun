@@ -60,7 +60,7 @@ juegoCachipun(nJuegos);
 // Resumen del juego 
 
 if (contWin > contLoose) {
-    alert(`Ganaste ${contWin} veces sos una maquina del cachipun bebe!!!`);
+    alert(`Ganaste ${contWin} veces sos una maquina del cachipun bebesito!!!`);
 }
 else if (contWin < contLoose) {
     alert(`Entero pollo, perdiste ${contLoose} veces... anda a estudiar mejor`);
